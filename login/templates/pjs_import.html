@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<template>
+	<v-container>
+		<v-form ref="form">
+			{% csrf_token %}
+			<v-file-input
+				:rules="rules"	
+				label="Seleccione el archivo"
+				prepend-icon="mdi-file"
+				required
+				name="robin"
+				id="file_pjs"
+				accept=".csv"
+			></v-file-input>
+			<v-btn color="success" @click="send">
+				Validate
+			</v-btn>
+		</v-form>
+		<v-overlay :value="overlay"></v-overlay>
+	</v-container>
+</template>
+{% endblock content %}

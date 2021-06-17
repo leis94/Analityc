@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+  {% block title %}Login Anality{% endblock %}
+  {% block content %}
+        <v-container class="fill-height login-container" fluid>
+          <v-row align="center" justify="center">
+            <v-col cols="12" sm="8" md="4">
+              <v-card class="elevation-12">
+                <v-card-title class="justify-center">Bienvenido</v-card-title>
+                <v-spacer></v-spacer>
+                <v-card-text>
+                  {% load static %}
+                  <v-img
+                    src="{% static 'images/logo-color.png' %}"
+                  >
+                  </v-img>
+                </v-card-text>
+                <v-spacer></v-spacer>
+                <v-card-actions class="justify-center">
+                  <!-- <a href="" class="btn btn-success btn-user btn-block">
+                    <i class="fab fa-microsoft fa-fw"></i> Ingresa
+                  </a> -->
+                  <v-btn color="success" href="{{signin_url}}">Ingresa</v-btn>
+                </v-card-actions>
+              </v-card>
+              <br>
+              {% for message in messages %}
+                <v-alert type="error">
+                  {{message}}
+                </v-alert>
+              {% endfor %}
+              
+            </v-col>
+          </v-row>
+        </v-container>
+{% endblock %}

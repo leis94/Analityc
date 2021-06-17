@@ -1,0 +1,7 @@
+DJANGO_SECRET_KEY='f1k=*)hr0w99ol3$f0ydu4ewd4ye2grt5_$o0qz%8=pr(uvor4'
+DJANGO_DEBUG=''
+DJANGO_HOST_DB='0.0.0.0'
+DJANGO_PORT_DB='33060'
+DJANGO_MYSQL_USER='analityDB'
+DJANGO_MYSQL_PASSWORD='Cu4lqu13r4!#%'
+DJANGO_REDIRECT_URI='https://analiticacolombia.itsinfocom.com/gettoken/'
